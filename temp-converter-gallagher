@@ -1,0 +1,35 @@
+'''the temp converter will take degrees F (Fahrenheit) and convert it to
+degrees C (Celsius) and degrees K (Kelvin)
+
+Roadmap
+Input temperatures
+Variables for that input
+The formula to convert F to C Formula = (F-32)(5/9)
+Formula to convert C to K (C+273.15)
+Print results'''
+
+#input
+tempF = input("Temperature (F): ")
+
+#convert to C
+def convertC():
+    tempC = (int(tempF)-32)*(5/9)
+    return(tempC)
+
+#return value from function to variable
+tempC = convertC()
+
+#convert to K
+def convertK(tempC):
+    tempK = int(tempC) + 273
+    return(tempK)
+
+#return value from function to variable
+tempK = convertK(tempC)
+
+#round numbers
+tempK = int(tempK)
+tempC = int(tempC)
+
+#print results
+print(f"Temperature (Celsius): {tempC}\nTemperature (Kelvin): {tempK}")
